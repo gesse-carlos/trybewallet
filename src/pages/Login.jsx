@@ -76,8 +76,20 @@ class Login extends React.Component {
     return (
       <div className="login-container">
         <div className="logo-container">
-          <p>logo 1</p>
-          <p>logo 2</p>
+          <div className="wallet">
+            <img
+              src="https://i.ibb.co/3dBLWWV/clipart1723162.png"
+              alt="wallet"
+              id="wallet"
+            />
+          </div>
+          <div className="trybe">
+            <img
+              src="https://freecourse.betrybe.com/images/trybe-logo-e10dbaaa26462aa149b81a924b00df07.png?vsn=d"
+              alt="trybe"
+              id="trybe"
+            />
+          </div>
         </div>
         <form onSubmit={ this.handleSubmit }>
           <Input

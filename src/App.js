@@ -4,6 +4,7 @@ import {
   Route,
 } from 'react-router-dom';
 import { Login, Wallet, NotFound } from './pages';
+import './App.css';
 
 function App() {
   return (
