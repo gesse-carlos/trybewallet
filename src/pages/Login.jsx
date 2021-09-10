@@ -108,6 +108,7 @@ class Login extends React.Component {
             testID="password-input"
             onChange={ this.validatePassword }
           />
+          <small>*Mínimo 6 caracteres</small>
           <Button
             id="submit-button"
             text="Entrar"
