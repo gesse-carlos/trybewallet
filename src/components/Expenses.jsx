@@ -68,11 +68,12 @@ class Expenses extends React.Component {
     const getCurrencies = Object.keys(currencies);
     const filterCurrencies = getCurrencies.filter((item) => item !== 'USDT');
     return (
-      <div>
+      <div className="form-group">
         <Select
           name="currency"
           labelText="Moeda"
           id="expense-currency"
+          className="form-control select"
           options={ filterCurrencies }
           onChange={ this.handleChange }
         />
@@ -80,12 +81,14 @@ class Expenses extends React.Component {
           name="method"
           labelText="Método de pagamento"
           id="expense-payment"
+          className="form-control select"
           options={ methods }
           onChange={ this.handleChange }
         />
         <Select
           name="tag"
           labelText="Tag"
+          className="form-control select"
           id="expense-category"
           options={ tags }
           onChange={ this.handleChange }
@@ -96,12 +99,12 @@ class Expenses extends React.Component {
 
   renderInputs() {
     return (
-      <div>
+      <div className="form-group">
         <Input
           type="number"
           name="value"
           placeholder="0"
-          className="expense-input"
+          className="form-control"
           id="expense-value"
           labelText="Valor"
           onChange={ this.handleChange }
@@ -109,7 +112,7 @@ class Expenses extends React.Component {
         <Input
           type="text"
           name="description"
-          className="expense-input"
+          className="form-control"
           id="expense-description"
           labelText="Descrição"
           onChange={ this.handleChange }
@@ -121,7 +124,7 @@ class Expenses extends React.Component {
   renderForm() {
     return (
       <section>
-        <form onSubmit={ this.handleSubmit }>
+        <form onSubmit={ this.handleSubmit } className="form-group">
           { this.renderInputs() }
           { this.renderSelects() }
           <Button

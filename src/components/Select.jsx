@@ -2,8 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 function Select(props) {
-  const { name, labelText, id, options, onChange } = props;
-  // console.log(options);
+  const { name, labelText, id, options, onChange, className } = props;
 
   return (
     <label htmlFor={ id }>
@@ -11,12 +10,14 @@ function Select(props) {
       <select
         name={ name }
         id={ id }
+        className={ className }
         onChange={ onChange }
       >
         {
           options ? options.map((item, index) => (
             <option
               key={ index }
+              className="option"
               value={ item }
             >
               { item }
@@ -35,6 +36,7 @@ Select.propTypes = {
   labelText: string,
   id: string,
   onChange: func,
+  className: string,
 }.isRequired;
 
 export default Select;

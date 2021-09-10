@@ -22,20 +22,22 @@ class Table extends React.Component {
       'Câmbio utilizado',
       'Valor convertido',
       'Moeda de conversão',
-      'Editar/Excluir',
+      'Excluir',
     ];
 
     return (
-      <table>
-        <thead>
-          <tr>
-            {tableHeaders.map((name) => <th key={ name }>{name}</th>)}
-          </tr>
-        </thead>
-        <tbody>
-          <Tbody />
-        </tbody>
-      </table>
+      <div>
+        <table className="table">
+          <thead>
+            <tr className="table-row">
+              {tableHeaders.map((name) => <th key={ name } className="table-cell">{name}</th>)}
+            </tr>
+          </thead>
+          <tbody>
+            <Tbody />
+          </tbody>
+        </table>
+      </div>
     );
   }
 

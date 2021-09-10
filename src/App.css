@@ -37,9 +37,9 @@
   cursor: pointer;
 }
 
-button:hover,
-button:active,
-button:focus {
+#submit-button:hover,
+#submit-button:active,
+#submit-button:focus {
   background: #43A047;
 }
 
@@ -57,4 +57,24 @@ button:focus {
 
 #trybe {
   max-width: 290%;
+}
+
+.header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-around;
+  background-color: #1e555c;
+  color: black;
+  height: 100px;
+}
+
+.link {
+  text-decoration: none;
+  font-size: 30px;
+  color: black;
+}
+
+.link:hover {
+  text-decoration: none;
+  color: #d4d6b9;
 }

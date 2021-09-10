@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 
 class Header extends React.Component {
@@ -23,12 +24,10 @@ class Header extends React.Component {
 
   render() {
     const { user } = this.props;
-    // console.log(getWalletExpenses);
-    // console.log(this.totalAmount());
 
     return (
-      <header data-testid="email-field">
-        <h3>
+      <header className="header">
+        <h3 data-testid="email-field">
           Email:
           <span>{` ${user}`}</span>
         </h3>
@@ -43,6 +42,7 @@ class Header extends React.Component {
         <div data-testid="header-currency-field">
           <p>Câmbio: BRL</p>
         </div>
+        <Link to="/trybewallet" className="link">Home</Link>
       </header>
     );
   }
